@@ -1,0 +1,285 @@
+/*----------------------------*/
+/*        General             */
+/*----------------------------*/
+body {
+    background: gray;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+/*----------------------------*/
+/*         Container          */
+/*----------------------------*/
+.yapoey-container {
+    display: grid;
+    grid-template-columns: 250px auto;
+    height: 100vh;
+
+
+}
+
+/******************************/
+/*----------------------------*/
+/*       side-main-menu       */
+/*----------------------------*/
+.side-main-menu {
+    height: 100%;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 150px minmax(300px, auto) 200px;
+    background-color: #53544d;
+
+
+
+}
+
+/*----------------------------*/
+/*          yap-log           */
+/*----------------------------*/
+.yap-log {
+    background: url(../../img/yapoey.png) no-repeat center center;
+    background-size: contain;
+    overflow: hidden;
+}
+.yap-log-mobile {
+    display: none;
+}
+/*----------------------------*/
+/*          main-menu         */
+/*----------------------------*/
+.main-menu-mobile {
+    display: none;
+}
+.main-menu {
+    background-color: #53544d;
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+}
+.main-menu ul li {
+    color: rgba(230, 230, 230, 0.9);
+    list-style: none;
+    padding: 15px 10px;
+
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+}
+.main-menu li img {
+    width: 20px;
+    margin-right: 10px;
+}
+.dropdown-container {
+    display: none;
+    background-color: #5d5e59;
+    padding-left: 2px;
+    font-size: 10px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+/* Style the sidenav links and the dropdown button */
+a,
+.dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+a:hover,
+.dropdown-btn:hover {
+    color: #b184d6;
+}
+
+/*----------------------------*/
+/*    yap-sub-menu-footer     */
+/*----------------------------*/
+.yap-sub-menu-footer {
+    background: linear-gradient(to right, #b86ef9, #919ef9, #64d5fa);
+}
+/********************************/
+
+/*----------------------------*/
+/*         main-page          */
+/*----------------------------*/
+.main-page {
+    display: grid;
+    grid-template-rows: 100px 120px auto;
+    background-color: #f1f3f6;
+}
+.call-out-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content:space-around;
+}
+.call-out {
+    width: 35%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #f2f0f0;
+    display: flex;
+    flex-direction: column;
+}
+.call-out-title{
+padding-left: 10px;
+padding-top: 10px;
+}
+.call-out-box{
+  display: flex;
+  flex-direction: row;
+}
+.call-out-value{
+  font-size: 18px;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;;
+}
+.call-out-img{
+  flex: 1;
+}
+
+/*----------------------------*/
+/*        main-header         */
+/*----------------------------*/
+.main-header{
+  display: grid;
+  grid-template-columns: 100px auto 200px;
+}
+.welcome-logo{
+  background: url(../../img/welcome-logo.png) no-repeat center center;
+  background-size: contain;
+  margin-left: 15px;
+
+}
+.welcome-titel{
+  padding-top: 35px;
+  padding-left: 15px;
+}
+.on-off-btn{
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*----------------------------*/
+/*   main-page-container      */
+/*----------------------------*/
+/*I can add the graph here*/
+.main-page-container{
+background-color: gray;
+display:flex;
+justify-content: center;
+padding-top: 50px;
+}
+
+/******************************/
+/*          Media-Quary       */
+/*****************************/
+@media screen and (max-width: 992px) {
+    /*----------------------------*/
+    /*       Main-container       */
+    /*----------------------------*/
+    .yapoey-container {
+        display: grid;
+        grid-template-columns: 70px auto;
+    }
+    /*----------------------------*/
+    /*          yap-log           */
+    /*----------------------------*/
+    .yap-log {
+        display: none;
+    }
+    .yap-log-mobile {
+        display: inline;
+        background: url(../../img/yapoey_small.png) no-repeat center center;
+        background-size: contain;
+        overflow: hidden;
+    }
+    /*----------------------------*/
+    /*      main-menu-mobile      */
+    /*----------------------------*/
+    .main-menu-mobile {
+        display: inline;
+    }
+    .main-menu-mobile {
+        background-color: #53544d;
+    }
+    .main-menu-mobile li img {
+        width: 5px;
+        margin-right: 10px;
+    }
+
+    /*----------------------------*/
+    /*         main-menu          */
+    /*----------------------------*/
+    .main-menu {
+        display: none;
+    }
+}
+/******************************/
+/******************************/
